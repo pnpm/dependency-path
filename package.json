@@ -1,0 +1,50 @@
+{
+  "name": "dependency-path",
+  "version": "0.0.0",
+  "description": "Utilities for working with symlinked node_modules",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "pretest": "tsc",
+    "test": "mos t",
+    "prepublishOnly": "tsc",
+    "md": "mos",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnpm/dependency-path.git"
+  },
+  "keywords": [
+    "registry"
+  ],
+  "author": {
+    "name": "Zoltan Kochan",
+    "email": "zoltan.kochan@gmail.com",
+    "url": "https://www.kochan.io/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pnpm/dependency-path/issues"
+  },
+  "homepage": "https://github.com/pnpm/dependency-path#readme",
+  "dependencies": {
+    "encode-registry": "^1.0.0"
+  },
+  "devDependencies": {
+    "mos": "^2.0.0-alpha.3",
+    "mos-plugin-readme": "^1.0.4",
+    "typescript": "^2.4.1"
+  },
+  "mos": {
+    "plugins": [
+      "readme"
+    ],
+    "installation": {
+      "useShortAlias": true
+    }
+  }
+}
