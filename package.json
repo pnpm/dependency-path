@@ -19,7 +19,9 @@
     "url": "git+https://github.com/pnpm/dependency-path.git"
   },
   "keywords": [
-    "registry"
+    "node_modules",
+    "pnpm",
+    "path"
   ],
   "author": {
     "name": "Zoltan Kochan",

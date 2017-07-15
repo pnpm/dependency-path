@@ -6,6 +6,9 @@
 [![npm version](https://img.shields.io/npm/v/dependency-path.svg)](https://www.npmjs.com/package/dependency-path) [![Build Status](https://img.shields.io/travis/pnpm/dependency-path/master.svg)](https://travis-ci.org/pnpm/dependency-path)
 <!--/@-->
 
+Like `path` but for packages in a symlinked `node_modules`. Symlinked `node_modules` is a unique dependencies layout that
+[pnpm](https://github.com/pnpm/pnpm) creates.
+
 ## Installation
 
 ```sh
