@@ -1,5 +1,7 @@
 # dependency-path
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pnpm/dependency-path.svg)](https://greenkeeper.io/)
+
 > Utilities for working with symlinked node_modules
 
 <!--@shields('npm', 'travis')-->
