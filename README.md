@@ -23,6 +23,9 @@ const dependencyPath = require('dependency-path')
 
 const registry = 'https://registry.npmjs.org/'
 
+console.log(dependencyPath.isAbsolute('/foo/1.0.0'))
+//> false
+
 // it is confusing currently because relative starts with /.
 // It will be changed in the future to vice versa
 console.log(dependencyPath.resolve(registry, '/foo/1.0.0'))

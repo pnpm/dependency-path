@@ -1,10 +1,14 @@
 import encodeRegistry = require('encode-registry')
 
+export function isAbsolute (dependencyPath: string) {
+  return dependencyPath[0] !== '/'
+}
+
 export function resolve (
   registryUrl: string,
   resolutionLocation: string
 ) {
-  if (resolutionLocation[0] === '/') {
+  if (!isAbsolute(resolutionLocation)) {
     const registryDirectory = encodeRegistry(registryUrl)
     return `${registryDirectory}${resolutionLocation}`
   }
