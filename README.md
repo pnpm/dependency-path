@@ -42,6 +42,9 @@ console.log(dependencyPath.refToAbsolute('github.com/foo/bar/twe0jger043t0ew', '
 
 console.log(dependencyPath.refToRelative('1.0.1', 'foo', registry))
 //> /foo/1.0.1
+
+console.log(dependencyPath.parse('/foo/2.0.0'))
+//> { isAbsolute: false, name: 'foo', version: '2.0.0' }
 ```
 <!--/@-->
 

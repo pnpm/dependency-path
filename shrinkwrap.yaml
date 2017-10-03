@@ -1,5 +1,7 @@
 dependencies:
+  '@types/semver': 5.4.0
   encode-registry: 1.0.0
+  semver: 5.4.1
 devDependencies:
   '@types/tape': 4.2.30
   mos: 2.0.0-alpha.3
@@ -12,6 +14,9 @@ packages:
     dev: true
     resolution:
       integrity: sha512-lrtgE/5FeTdcuxgsDbLUIFJ33dTp4TkbKkTDZt/ueUMeqmGYqJRQd908q5Yj9EzzWSMonEhMr1q/CQlgVGEt4w==
+  /@types/semver/5.4.0:
+    resolution:
+      integrity: sha512-PBHCvO98hNec9A491vBbh0ZNDOVxccwKL1u2pm6fs9oDgm7SEnw0lEHqHfjsYryDxnE3zaf7LvERWEXjOp1hig==
   /@types/tape/4.2.30:
     dependencies:
       '@types/node': 8.0.14
@@ -1590,6 +1595,9 @@ packages:
     dev: true
     resolution:
       integrity: sha1-myzl094C0XxgEq0yaqa00M9U+U8=
+  /semver/5.4.1:
+    resolution:
+      integrity: sha512-WfG/X9+oATh81XtllIo/I8gOiY9EXRdv1cQdyykeXK17YcUW3EXUAi2To4pcH6nZtJPr7ZOpM5OMyWJZm+8Rsg==
   /shieldman/1.2.0:
     dev: true
     resolution:
@@ -1964,10 +1972,12 @@ packages:
 registry: 'https://registry.npmjs.org/'
 shrinkwrapVersion: 3
 specifiers:
+  '@types/semver': ^5.4.0
   '@types/tape': ^4.2.30
   encode-registry: ^1.0.0
   mos: ^2.0.0-alpha.3
   mos-plugin-readme: ^1.0.4
+  semver: ^5.4.1
   tape: ^4.7.0
   ts-node: ^3.2.1
   typescript: ^2.4.1

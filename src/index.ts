@@ -1,4 +1,5 @@
 import encodeRegistry = require('encode-registry')
+import semver = require('semver')
 
 export function isAbsolute (dependencyPath: string) {
   return dependencyPath[0] !== '/'
@@ -47,4 +48,31 @@ export function refToRelative (
     return `/${pkgName}/${reference}`
   }
   return reference
+}
+
+export function parse (dependencyPath: string) {
+	if (typeof dependencyPath !== 'string') {
+		throw new TypeError(`Expected \`dependencyPath\` to be of type \`string\`, got \`${typeof dependencyPath}\``);
+	}
+  const _isAbsolute = isAbsolute(dependencyPath)
+  const parts = dependencyPath.split('/')
+  if (!_isAbsolute) parts.shift()
+  const host = _isAbsolute ? parts.shift() : undefined
+  const name = parts[0].startsWith('@')
+    ? `${parts.shift()}/${parts.shift()}`
+    : parts.shift()
+  const version = parts.shift()
+  if (version && semver.valid(version)) {
+    return {
+      isAbsolute: _isAbsolute,
+      name,
+      version,
+      host,
+    }
+  }
+  if (!_isAbsolute) throw new Error(`${dependencyPath} is an invalid relative dependency path`)
+  return {
+    isAbsolute: _isAbsolute,
+    host,
+  }
 }

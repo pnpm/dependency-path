@@ -34,7 +34,9 @@
   },
   "homepage": "https://github.com/pnpm/dependency-path#readme",
   "dependencies": {
-    "encode-registry": "^1.0.0"
+    "@types/semver": "^5.4.0",
+    "encode-registry": "^1.0.0",
+    "semver": "^5.4.1"
   },
   "devDependencies": {
     "@types/tape": "^4.2.30",
