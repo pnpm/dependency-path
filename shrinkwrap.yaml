@@ -6,9 +6,9 @@ devDependencies:
   '@types/tape': 4.2.30
   mos: 2.0.0-alpha.3
   mos-plugin-readme: 1.0.4
-  tape: 4.7.0
-  ts-node: 3.2.1
-  typescript: 2.4.1
+  tape: 4.8.0
+  ts-node: 3.3.0
+  typescript: 2.5.3
 packages:
   /@types/node/8.0.14:
     dev: true
@@ -1272,10 +1272,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-NLymRKgPlPi6QaD50JhOr2Os8U0=
-  /object-inspect/1.2.2:
+  /object-inspect/1.3.0:
     dev: true
     resolution:
-      integrity: sha1-yCEV5PzIiK6hTWTCLk8X9qcNXlo=
+      integrity: sha512-OHHnLgLNXpM++GnJRyyhbr2bwl3pPVm4YvaraHrRvDt/N3r+s/gDVHciA7EJBTkijKXj61ssgSAikq1fb0IBRg==
   /object-keys/1.0.11:
     dev: true
     resolution:
@@ -1541,12 +1541,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-IDEU2CrSxe2ejgQRs5ModeiJ6Xs=
-  /resolve/1.3.3:
+  /resolve/1.4.0:
     dependencies:
       path-parse: 1.0.5
     dev: true
     resolution:
-      integrity: sha1-ZVkHw0aahoDcLeOidaj91paR8OU=
+      integrity: sha512-aW7sVKPufyHqOmyyLzg/J+8606v5nevBgaliIlV7nUpVMsDnoBGV/cbSLNjZAg9q0Cfd/+easKVKQ8vOu8fn1Q==
   /resumer/0.0.0:
     dependencies:
       through: 2.3.8
@@ -1768,7 +1768,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-K7PqGb3J9SJSF7P5fL95hsxMbow=
-  /tape/4.7.0:
+  /tape/4.8.0:
     dependencies:
       deep-equal: 1.0.1
       defined: 1.0.0
@@ -1778,14 +1778,14 @@ packages:
       has: 1.0.1
       inherits: 2.0.3
       minimist: 1.2.0
-      object-inspect: 1.2.2
-      resolve: 1.3.3
+      object-inspect: 1.3.0
+      resolve: 1.4.0
       resumer: 0.0.0
       string.prototype.trim: 1.1.2
       through: 2.3.8
     dev: true
     resolution:
-      integrity: sha512-ePzu2KfZYVtq0v+KKGxBJ9HJWYZ4MaQWeGabD+KpVdMKRen3NJPf6EiwA5BxfMkhQPGtCwnOFWelcB39bhOUng==
+      integrity: sha512-TWILfEnvO7I8mFe35d98F6T5fbLaEtbFTG/lxWvid8qDfFTxt19EBijWmB4j3+Hoh5TfHE2faWs73ua+EphuBA==
   /the-argv/1.0.0:
     dev: true
     resolution:
@@ -1825,7 +1825,7 @@ packages:
     dev: true
     resolution:
       integrity: sha1-WFhUf2spB1fulczMZm+1AITEYN0=
-  /ts-node/3.2.1:
+  /ts-node/3.3.0:
     dependencies:
       arrify: 1.0.1
       chalk: 2.0.1
@@ -1839,7 +1839,7 @@ packages:
       yn: 2.0.0
     dev: true
     resolution:
-      integrity: sha1-lZXdhA0D5ivHkhTOWntR5V48T/w=
+      integrity: sha1-wTxqMCTjC+EYDdUwOPwgkonUv2k=
   /tsconfig/6.0.0:
     dependencies:
       strip-bom: 3.0.0
@@ -1847,10 +1847,10 @@ packages:
     dev: true
     resolution:
       integrity: sha1-aw6DdgA9evGGT434+J3QBZ/80DI=
-  /typescript/2.4.1:
+  /typescript/2.5.3:
     dev: true
     resolution:
-      integrity: sha1-w8yxbdqgsjFN4DHn5v7onlujRrw=
+      integrity: sha512-ptLSQs2S4QuS6/OD1eAKG+S5G8QQtrU5RT32JULdZQtM1L3WTi34Wsu48Yndzi8xsObRAB9RPt/KhA9wlpEF6w==
   /unist-util-remove-position/1.1.1:
     dependencies:
       unist-util-visit: 1.1.3
@@ -1978,6 +1978,6 @@ specifiers:
   mos: ^2.0.0-alpha.3
   mos-plugin-readme: ^1.0.4
   semver: ^5.4.1
-  tape: ^4.7.0
-  ts-node: ^3.2.1
-  typescript: ^2.4.1
+  tape: ^4.8.0
+  ts-node: ^3.3.0
+  typescript: ^2.5.3

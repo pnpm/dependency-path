@@ -42,9 +42,9 @@
     "@types/tape": "^4.2.30",
     "mos": "^2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "tape": "^4.7.0",
-    "ts-node": "^3.2.1",
-    "typescript": "^2.4.1"
+    "tape": "^4.8.0",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.5.3"
   },
   "mos": {
     "plugins": [
