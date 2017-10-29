@@ -2,7 +2,7 @@ import test = require('tape')
 import {
   isAbsolute,
   parse,
-} from '.'
+} from 'dependency-path'
 
 test('isAbsolute()', t => {
   t.notOk(isAbsolute('/foo/1.0.0'))
