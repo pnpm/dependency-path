@@ -1,4 +1,4 @@
-const dependencyPath = require('./lib')
+const dependencyPath = require('dependency-path')
 
 const registry = 'https://registry.npmjs.org/'
 
