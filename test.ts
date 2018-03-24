@@ -1,5 +1,7 @@
 import test = require('tape')
 import {
+  refToAbsolute,
+  refToRelative,
   isAbsolute,
   parse,
 } from 'dependency-path'
@@ -56,5 +58,17 @@ test('parse()', t => {
 
   t.throws(() => parse('/foo/bar'), /\/foo\/bar is an invalid relative dependency path/)
 
+  t.end()
+})
+
+test('refToAbsolute()', t => {
+  t.equal(refToAbsolute('1.0.0', 'foo', 'https://registry.npmjs.org/'), 'registry.npmjs.org/foo/1.0.0')
+  t.equal(refToAbsolute('registry.npmjs.org/foo/1.0.0', 'foo', 'https://registry.npmjs.org/'), 'registry.npmjs.org/foo/1.0.0')
+  t.equal(refToAbsolute('/foo/1.0.0', 'foo', 'https://registry.npmjs.org/'), 'registry.npmjs.org/foo/1.0.0')
+  t.end()
+})
+
+test('refToRelative()', t => {
+  t.equal(refToRelative('/@most/multicast/1.3.0/most@1.7.3', '@most/multicast'), '/@most/multicast/1.3.0/most@1.7.3')
   t.end()
 })

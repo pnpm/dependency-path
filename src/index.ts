@@ -25,7 +25,9 @@ export function refToAbsolute (
     const registryName = encodeRegistry(registry)
     return `${registryName}/${pkgName}/${reference}`
   }
-  return reference
+  if (reference[0] !== '/') return reference
+  const registryName = encodeRegistry(registry)
+  return `${registryName}${reference}`
 }
 
 export function relative (
