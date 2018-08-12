@@ -36,7 +36,7 @@ export function relative (
 ) {
   const registryName = encodeRegistry(standardRegistry)
 
-  if (absoluteResolutionLoc.startsWith(`${registryName}/`)) {
+  if (absoluteResolutionLoc.startsWith(`${registryName}/`) && absoluteResolutionLoc.indexOf('/-/') === -1) {
     return absoluteResolutionLoc.substr(absoluteResolutionLoc.indexOf('/'))
   }
   return absoluteResolutionLoc

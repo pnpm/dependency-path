@@ -4,6 +4,7 @@ import {
   refToRelative,
   isAbsolute,
   parse,
+  relative,
 } from 'dependency-path'
 
 test('isAbsolute()', t => {
@@ -70,5 +71,12 @@ test('refToAbsolute()', t => {
 
 test('refToRelative()', t => {
   t.equal(refToRelative('/@most/multicast/1.3.0/most@1.7.3', '@most/multicast'), '/@most/multicast/1.3.0/most@1.7.3')
+  t.end()
+})
+
+test('relative()', t => {
+  t.equal(relative('https://registry.npmjs.org/', 'registry.npmjs.org/foo/1.0.0'), '/foo/1.0.0')
+  t.equal(relative('https://registry.npmjs.org/', 'registry.npmjs.org/foo/1.0.0/PeLdniYiO858gXNY39o5wISKyw'), '/foo/1.0.0/PeLdniYiO858gXNY39o5wISKyw')
+  t.equal(relative('https://registry.npmjs.org/', 'registry.npmjs.org/foo/-/foo-1.0.0'), 'registry.npmjs.org/foo/-/foo-1.0.0', 'a tarball ID should remain absolute')
   t.end()
 })

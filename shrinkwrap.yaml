@@ -1,5 +1,6 @@
 dependencies:
   '@types/semver': 5.5.0
+  dependency-path: 'link:../__package_previews__/dependency-path/dependency-path'
   encode-registry: 1.1.0
   semver: 5.5.0
 devDependencies:
