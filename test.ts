@@ -66,11 +66,13 @@ test('refToAbsolute()', t => {
   t.equal(refToAbsolute('1.0.0', 'foo', 'https://registry.npmjs.org/'), 'registry.npmjs.org/foo/1.0.0')
   t.equal(refToAbsolute('registry.npmjs.org/foo/1.0.0', 'foo', 'https://registry.npmjs.org/'), 'registry.npmjs.org/foo/1.0.0')
   t.equal(refToAbsolute('/foo/1.0.0', 'foo', 'https://registry.npmjs.org/'), 'registry.npmjs.org/foo/1.0.0')
+  t.equal(refToAbsolute('link:../foo', 'foo', 'https://registry.npmjs.org/'), null, "linked dependencies don't have an absolute path")
   t.end()
 })
 
 test('refToRelative()', t => {
   t.equal(refToRelative('/@most/multicast/1.3.0/most@1.7.3', '@most/multicast'), '/@most/multicast/1.3.0/most@1.7.3')
+  t.equal(refToRelative('link:../foo', 'foo'), null, "linked dependencies don't have a relative path")
   t.end()
 })
 

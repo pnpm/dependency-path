@@ -21,6 +21,9 @@ export function refToAbsolute (
   pkgName: string,
   registry: string
 ) {
+  if (reference.startsWith('link:')) {
+    return null
+  }
   if (reference.indexOf('/') === -1) {
     const registryName = encodeRegistry(registry)
     return `${registryName}/${pkgName}/${reference}`
@@ -46,6 +49,9 @@ export function refToRelative (
   reference: string,
   pkgName: string
 ) {
+  if (reference.startsWith('link:')) {
+    return null
+  }
   if (reference.indexOf('/') === -1) {
     return `/${pkgName}/${reference}`
   }
