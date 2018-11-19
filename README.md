@@ -1,3 +1,5 @@
+> this repo has been moved to https://github.com/pnpm/pnpm/tree/master/packages/dependency-path
+
 # dependency-path
 
 > Utilities for working with symlinked node_modules
